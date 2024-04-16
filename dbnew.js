@@ -1,5 +1,12 @@
 const mongoose = require('mongoose');
-const mongoURL = "mongodb://127.0.0.1:27017/hotels";
+require('dotenv').config();
+// Connection to local MongoDB database
+//const mongoURL = process.env.MONGODB_URL_LOCAL;
+
+//Connect to mongoDB Atlas
+//const mongoURL = 'mongodb+srv://ReetShah:Reetshah13@cluster0.si4z4zt.mongodb.net/'
+
+const mongoURL = process.env.MONGODB_URL;
 // Connect to the database
 const connectDB = async () => {
     try {
